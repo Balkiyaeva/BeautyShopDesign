@@ -1,0 +1,262 @@
+@media all and (min-width: 360px) {
+
+.header, body, .footer {zoom: 25%;}
+
+}
+
+ @media all and (min-width: 720px) {
+
+ .header, body, .footer {zoom: 50%;}
+
+}
+
+@media all and (min-width: 1280px) {
+
+ .header, body, .footer {zoom: 100%;}
+
+}
+
+ @media all and (min-width: 1920px) {
+
+ .header, body, .footer {zoom: 150%;}
+
+}
+
+@media all and (min-width: 2560px) {
+
+ .header, body, .footer {zoom: 200%;}
+
+}
+
+@media all and (min-width: 3840px) {
+
+ .header, body, .footer {zoom: 250%;}
+
+}
+
+.header{
+  color: white;
+}
+.search{
+  margin-top: 15px;
+  margin-left: 5px;
+  display: flex;
+  justify-content: flex-end;
+}
+.search input {
+  width: 180px;
+  height: 25px;
+  padding-left: 15px;
+  border-radius: 42px;
+  border: 1px solid black;
+  outline: none;
+  font-family: monospace;
+}
+.search button {
+  background: none;
+  border: none;
+}
+.search button::before {
+  background-image: url(images/search.svg);
+  background-size: 20px 20px;
+  background-position: bottom;
+  display: flex;
+  width: 20px;
+  height: 20px;
+  content: "";
+}
+.navbar{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.navbar-toggler{
+  margin-right: 5px;
+}
+.headd2{
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+.linksb{
+  background-color: white;
+  margin: 5px;
+}
+.linksb li{
+  font-style: italic;
+  font-size: 20px;
+  display: inline;
+  margin: 40px;
+}
+.linksb a{
+  text-decoration: none;
+  color: black;
+  transition: 0.5s;
+}
+.carousel-inner{
+  z-index: -1;
+}
+.w-100 {
+  width: 100% !important;
+  height: 65vh;
+}
+.nameofbrand{
+  font-family: "Brush Script MT";
+}
+.nnw{
+  padding: 20px;
+  font-family: cursive;
+}
+.nw{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  text-align: center;
+}
+.nwprod{
+  box-shadow: 5px 3px gray;
+  font-weight: bold;
+}
+.mainphoto{
+  position: absolute;
+  background: white;
+}
+.mainphoto:hover{
+  opacity:0;
+}
+.hovergif{
+  z-index: 0;
+}
+.shopbycontent{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  text-align: center;
+  padding: 20px;
+}
+.prod {
+  font-family: cursive;
+  font-size: 25px;
+}
+.bsell{
+  font-family: cursive;
+}
+.scrolling {
+  overflow-x: scroll;
+  overflow-y: hidden;
+  white-space: nowrap;
+  padding: 10px;
+}
+.scrolls {
+  display: inline-block;
+  padding: 10px;
+}
+.scrolls a{
+  text-decoration: none;
+  color: #333;
+}
+.scrolls p{
+  text-align: center;
+  background-color: #C0C0C0;
+}
+.scrolls button{
+  font-family: monospace;
+  margin: 2px;
+  background: none;
+  border-radius: 3px;
+  border: 1px solid gray;
+  background-color: white;
+}
+.scrolls button:hover{
+  border: 1px solid black;
+  transition: 0.5s;
+}
+.popupcart, .popupmail{
+  display: none;
+  position: fixed;
+  z-index: 101;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0,0.4);
+}
+.pp-content{
+  background-color: white;
+  text-align: center;
+  font-family: monospace;
+}
+.pp-header {padding: 2px 16px;}
+.pp-header span{
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+.pp-header span:hover{
+  color: gray;
+  text-decoration: none;
+  cursor: pointer;
+}
+.pp-body {padding: 2px 16px;}
+.footer {
+  background-color: #C0C0C0;
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px;
+  position: static;
+}
+.map{
+  height: 250px;
+  width: 300px;
+  border: 1px solid black;
+}
+.footer ul{
+  list-style-type: none;
+}
+.tabl{
+  border-collapse: separate;
+  border-spacing: 30px;
+  text-align: center;
+  font-family: serif;
+  font-style: oblique;
+}
+.tabl th {
+  margin-right: 20px;
+}
+.tabl a{
+  text-decoration: none;
+  color: #202128;
+}
+.mailsubmit {
+  margin-right: 70px;
+}
+.mailsubmit input {
+  width: 250px;
+  height: 40px;
+  padding-left: 15px;
+  border-radius: 42px;
+  border: 1px solid black;
+  outline: none;
+  font-family: monospace;
+}
+.mailsubmit button {
+  background: none;
+  border: none;
+  position: absolute;
+}
+.mailsubmit button::before {
+  background-image: url(images/mirror.svg);
+  background-size: 40px 40px;
+  background-repeat: no-repeat;
+  background-position: bottom;
+  display: flex;
+  width: 40px;
+  height: 40px;
+  content: "";
+}

@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta>
+  <title>Beauty Shop</title>
+  <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="styleh.css">
+  <link rel="stylesheet" href="styleprod.css">
+  <header class="header">
+    <div class="headd1" id="headd1">
+      <nav class="navbar navbar-light bg-white">
+        <div class="d-flex" id="cennav">
+            <form class="d-flex" role="search" id="form">
+                <p class="search"><input type="search" list="datalistOptions" id="search" name="srch" placeholder="Search...">
+                    <button type="submit" onclick="javascript: FindOnPage('search')"></p>
+                      <datalist id="datalistOptions">
+                        <option value="New">
+                        <option value="Skincare">
+                        <option value="Hair & Body">
+                        <option value="Makeup">
+                        <option value="Bestsellers">
+                      </datalist>
+            </form>
+        </div>
+        <a class="navbar-brand" href="project.html" id="namenav"><h1 class="nameofbrand">Beauty Shop</h1></a>
+        <button class="menubutton" onclick="javascript: openNav()">&#9776;</button>
+      </nav>
+    </div>
+    <div id="sidebar" class="sidebar">
+      <div class="d-flex justify-content-end">
+        <button class="menubutton" onclick="javascript: openNav()">&#x2715;</button>
+      </div>
+      <a href="#fott">About Us</a>
+      <a href="#fott">Contact Us</a>
+      <a href="project.html">Services</a>
+      <a href="#fott">FAQ</a>
+    </div>
+  </header>
+  <script src="scripts.js"></script>
+</head>
+<div class="popup">
+  <div class="popupcart" id="ppcart">
+    <div class="pp-content">
+      <div class="pp-header">
+        <span onclick="closewindow('ppcart')">&#x2715;</span>
+        <h2>You've succesfully added item to your cart!</h2>
+      </div>
+      <div class="pp-body">
+        <p id="added"></p>
+      </div>
+    </div>
+  </div>
+  <div class="popupmail" id="ppmail">
+    <div class="pp-content">
+      <div class="pp-header">
+        <span onclick="closewindow('ppmail')">&#x2715;</span>
+        <h2>You've succesfully subscribed to our mails!</h2>
+      </div>
+      <div class="pp-body">
+        <p id="mailsub"></p>
+      </div>
+    </div>
+  </div>
+</div>
+  <body>
+    <div id="bod">
+      <div class="headd2">
+        <nav class="navbar navbar-light bg-white">
+          <div class="opens">
+            <ul class="oppens">
+                <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Brands</a>
+                  <ul class="dropdown-menu dropdown-menu-start">
+                    <li><a class="dropdown-item" href="product.html">Glossier</a></li>
+                  </ul>
+                </li>
+                <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#sc" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Skincare</a>
+                  <ul class="dropdown-menu dropdown-menu-start">
+                    <li><a class="dropdown-item" href="prod.html">Milky Jelly Cleanser</a></li>
+                    <li><a class="dropdown-item" href="prod.html">Priming Moisturizer, Rich</a></li>
+                    <li><a class="dropdown-item" href="prod.html">Skin perfector, Solution</a></li>
+                  </ul>
+                </li>
+                <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#hb" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Hair & Body</a>
+                  <ul class="dropdown-menu dropdown-menu-start">
+                    <li><a class="dropdown-item" href="prod.html">Body Hero Daily Oil Wash</a></li>
+                    <li><a class="dropdown-item" href="prod.html">Body Hero Oil Mist</a></li>
+                  </ul>
+                </li>
+                <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#mu" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Makeup</a>
+                  <ul class="dropdown-menu dropdown-menu-start">
+                    <li><a class="dropdown-item" href="prod.html">Boy Brow</a></li>
+                    <li><a class="dropdown-item" href="prod.html">Cloud Paint, MU Set</a></li>
+                    <li><a class="dropdown-item" href="prod.html">Skin Tint</a></li>
+                  </ul>
+                </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+      <div class="products">
+        <div class="prods">
+          <a href="prod.html" target="_blank">
+            <img class="" src="image/set.jpg" width="200" height="200">
+          </a>
+          <p>MU Set, Cloud Paint <br><button type="button" id="addtc" onclick="addToCart('MU Set, Cloud Paint $56')">Add to Cart, $56</button></p>
+        </div>
+        <div class="prods">
+          <a href="prod.html" target="_blank">
+            <img class="" src="image/stint.jpg" width="200" height="200">
+          </a>
+          <p>Skin Tint, Glossier <br><button type="button" id="addtc" onclick="addToCart('Skin Tint, Glossier $32')">Add to Cart, $32</button></p>
+        </div>
+        <div class="prods">
+          <a href="prod.html" target="_blank">
+            <img class="" src="image/pmr.jpg" width="200" height="200">
+          </a>
+          <p>Priming moisturizer, RICH <br><button type="button" id="addtc" onclick="addToCart('Priming moisturizer, RICH $48')">Add to Cart, $48</button></p>
+        </div>
+        <div class="prods">
+          <a href="prod.html" target="_blank">
+            <img class="" src="image/solution.jpg" width="200" height="200">
+          </a>
+          <p>Skin perfector, Solution <br><button type="button" id="addtc" onclick="addToCart('Skin perfector, Solution $55')">Add to Cart, $55</button></p>
+        </div>
+        <div class="prods">
+          <a href="prod.html" target="_blank">
+            <img class="" src="image/boybrow.jpg" width="200" height="200">
+          </a>
+          <p>Boy Brow <br><button type="button" id="addtc" onclick="addToCart('Boy Brow + Balm Dotcom + Futuredew $42')">Add to Cart, $42</button></p>
+        </div>
+        <div class="prods">
+          <a href="prod.html" target="_blank">
+            <img class="" src="image/milky.jpg" width="200" height="200">
+          </a>
+          <p>Milky Jelly Cleanser <br><button type="button" id="addtc" onclick="addToCart('Milky Jelly Cleanser $13')">Add to Cart, $13</button></p>
+        </div>
+        <div class="prods">
+          <a href="prod.html" target="_blank">
+            <img class="" src="image/herooil.jpg" width="200" height="200">
+          </a>
+          <p>Body Hero Oil Wash <br><button type="button" id="addtc" onclick="addToCart('Body Hero Oil Wash $18')">Add to Cart, $18</button></p>
+        </div>
+        <div class="prods">
+          <a href="prod.html" target="_blank">
+            <img class="" src="image/oilmist.jpg" width="200" height="200">
+          </a>
+          <p>Body Hero Oil Mist <br><button type="button" id="addtc" onclick="addToCart('Body Hero Dry-Touch Oil Mist $28')">Add to Cart, $28</button></p>
+        </div>
+      </div>
+    </div>
+  </body>
+  <footer class="footer" id="fott">
+    <div class="map" id="map">
+    </div>
+    <script async
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBaIDpiCuiM0cV2V0Jp_9ugq1nyq06ypxE&callback=initMap">
+    ></script>
+    <div class="tabbl">
+      <table class="tabl" align="center">
+        <tr>
+          <th>About Us</th>
+          <th>Contact</th>
+        </tr>
+        <tr>
+          <td><a href="project.html">Our Webpage</a></td>
+          <td><a href="mailto: 201790@astanait.edu.kz">Mail Us</a></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td><a href="tel:+7701-705-05-82">Call Us</a></td>
+        </tr>
+      </table>
+    </div>
+    <div class="link">
+      <ul>
+        <li>
+          <div class="inputem">
+            <form>
+              <p class="mailsubmit"><input type="email" id="mailinput" placeholder="Write your Email...">
+                <button type="button" onclick="subscribed()"></button></p>
+            </form>
+          </div>
+        </li>
+        <li>
+          <div class="links">
+            <p style="color:black">
+            <a href="https://instagram.com" target="_blank"><img src="images/insta.svg" width="20" height="20" hspace="5"></a>
+            <a href="https://telegram.com" target="_blank"><img src="images/telegram.svg" width="20" height="20" hspace="5"></a>
+            <a href="https://vk.com" target="_blank"><img src="images/vk.svg" width="20" height="20" hspace="5"></a>
+            <a href="https://youtube.com" target="_blank"><img src="images/youtube.svg" width="20" height="20" hspace="5"></a>
+            </p>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </footer>
+</html>
